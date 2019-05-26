@@ -3,7 +3,7 @@ from core.http.request import Request
 from core.sch import ManageReq
 from core.downloder import Downloder
 from core.engine.start_kks import kks_init
-
+from core.engine.handle import Handle
 class BaseSpider(object):
     name = ''
     allowed_domains = []
@@ -27,7 +27,8 @@ class Spider(BaseSpider):
     async def run(cls):
         kks_init()
         async for req in cls.start_request():
-            ManageReq.add_request(req)
+            Handle.Request(request=req)
+            # ManageReq.add_request(req)
         await asyncio.gather(*Downloder.task_list())
 
 

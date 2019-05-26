@@ -26,9 +26,9 @@ class Downloder(object):
                             if req.method == "GET":
                                 async with session.get(**req.get_params()) as html:
                                     response = await html.text(encoding=req.encoding)
-                                    print(response)
-                                    exit(0)
-                                    print(response[0:500].encode())
+                                    print(response[0:100].encode())
+                                    # exit(0)
+                                    # print(response[0:500].encode())
                             elif req.method == "POST":
                                 async with session.post(req.url) as html:
                                     response = await html.text(encoding=req.encoding)

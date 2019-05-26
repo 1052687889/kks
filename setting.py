@@ -9,7 +9,10 @@ DEFAUT_HEADER = {
 DEFAULT_TIMEOUT = 5
 
 DOWNLOADER_MIDDLEWARES = {
-   'kks.middlewares.TestDownloaderMiddleware':543,
+    'kks.middlewares.TestDownloaderMiddleware0':543,
+    'kks.middlewares.TestDownloaderMiddleware1':544,
+    'kks.middlewares.TestDownloaderMiddleware2':541,
+    'kks.middlewares.TestDownloaderMiddleware3':543,
 }
 
 
